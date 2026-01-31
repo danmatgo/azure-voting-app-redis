@@ -1,4 +1,4 @@
-FROM python:3.11-slim as builder
+FROM python:3.12-slim-bookworm as builder
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
@@ -11,7 +11,7 @@ COPY azure-vote/requirements.txt .
 
 RUN pip install --no-cache-dir --user -r requirements.txt
 
-FROM python:3.11-slim
+FROM python:3.12-slim-bookworm
 
 LABEL maintainer="Daniel Matapi" \
     version="1.0.0" \
