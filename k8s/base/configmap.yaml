@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: voting-app-config
+  namespace: voting-app
+data:
+  TITLE: "Azure Voting App - DevSecOps Demo"
+  VOTE1VALUE: "Terraform"
+  VOTE2VALUE: "ARM Templates"
+  SHOWHOST: "true"

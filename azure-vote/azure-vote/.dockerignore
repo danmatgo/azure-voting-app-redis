@@ -1,0 +1,32 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.coverage
+htmlcov/
+.tox
+.env
+venv/
+*.egg-info
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Docker
+Dockerfile
+docker-compose*.yml
+
+# Docs
+*.md
+docs/
+
+# Tests
+tests/
+test_*.py
