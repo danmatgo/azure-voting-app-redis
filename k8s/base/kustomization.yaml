@@ -11,6 +11,7 @@ resources:
   - frontend-service.yaml
   - hpa.yaml
   - pdb.yaml
+  - network-policies.yaml
 
 labels:
   - pairs:

@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/azure-vote/azure-vote"
+    schedule:
+      interval: "weekly"
+    labels: ["dependencies", "python"]
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels: ["dependencies", "docker"]
+
+  - package-ecosystem: "docker"
+    directory: "/azure-vote"
+    schedule:
+      interval: "weekly"
+    labels: ["dependencies", "docker"]
