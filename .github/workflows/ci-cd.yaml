@@ -28,7 +28,7 @@ jobs:
       image-tag: ${{ steps.meta.outputs.tag }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Set image tag
         id: meta
@@ -80,7 +80,7 @@ jobs:
     if: github.ref == 'refs/heads/master' && github.event_name == 'push'
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       # Configurar kubectl con kubeconfig de cuenta TRABAJO
       - name: Setup Kubeconfig (Work Account - AKS)
