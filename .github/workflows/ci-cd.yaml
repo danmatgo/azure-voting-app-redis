@@ -9,8 +9,8 @@ on:
   workflow_dispatch:
 
 env:
-  ACR_NAME: votingappdevacr
-  ACR_LOGIN_SERVER: votingappdevacr.azurecr.io
+  ACR_NAME: votingappdevacr774
+  ACR_LOGIN_SERVER: votingappdevacr774.azurecr.io
   IMAGE_NAME: azure-vote-front
 
 permissions:
@@ -118,4 +118,3 @@ jobs:
             sleep 10
           done
           echo "⚠️ LoadBalancer IP not ready yet"
-

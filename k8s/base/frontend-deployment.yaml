@@ -22,11 +22,9 @@ spec:
         app: frontend
         tier: frontend
     spec:
-      imagePullSecrets:
-        - name: acr-secret
       containers:
         - name: frontend
-          image: votingappdevacr.azurecr.io/azure-vote-front:latest
+          image: votingappdevacr774.azurecr.io/azure-vote-front:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
