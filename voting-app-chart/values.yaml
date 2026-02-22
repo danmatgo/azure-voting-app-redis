@@ -1,0 +1,8 @@
+replicaCount: 1
+
+image:
+  repository: votingappdevacr774.azurecr.io/azure-vote-front
+  tag: latest # Usa el tag específico en prod
+
+redis:
+  host: "voting-app-redis"

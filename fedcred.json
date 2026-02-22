@@ -1,8 +1,0 @@
-﻿{
-    "subject":  "repo:danmatgo/azure-voting-app-redis:ref:refs/heads/master",
-    "audiences":  [
-                      "api://AzureADTokenExchange"
-                  ],
-    "issuer":  "https://token.actions.githubusercontent.com",
-    "name":  "github-master"
-}

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: voting-app
+  labels:
+    app: voting-app
+    env: development

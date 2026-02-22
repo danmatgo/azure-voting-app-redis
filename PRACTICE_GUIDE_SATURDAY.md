@@ -540,10 +540,10 @@ az role assignment create `
     --scope $ACR_ID
 
 # Federated Credential (OIDC)
-$SUBJECT = "repo:${GITHUB_ORG}/${GITHUB_REPO}:ref:refs/heads/main"
+$SUBJECT = "repo:${GITHUB_ORG}/${GITHUB_REPO}:ref:refs/heads/master"
 
 az ad app federated-credential create --id $OBJECT_ID --parameters "{
-    `"name`": `"github-main`",
+    `"name`": `"github-master`",
     `"issuer`": `"https://token.actions.githubusercontent.com`",
     `"subject`": `"$SUBJECT`",
     `"audiences`": [`"api://AzureADTokenExchange`"]
@@ -688,7 +688,7 @@ jobs:
     name: Deploy to AKS
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
     
     steps:
       - uses: actions/checkout@v4
@@ -737,7 +737,7 @@ jobs:
 ```powershell
 git add .
 git commit -m "feat: Add CI/CD with OIDC (ACR) and kubeconfig (AKS)"
-git push origin main
+git push origin master
 
 # Ve a GitHub → Actions para ver el pipeline
 ```
@@ -781,7 +781,7 @@ name: CodeQL
 
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths: ['**.py']
   schedule:
     - cron: '0 6 * * 1'
@@ -843,7 +843,7 @@ resources:
 ```powershell
 git add .
 git commit -m "feat(security): Add DevSecOps - Dependabot, CodeQL, NetworkPolicies"
-git push origin main
+git push origin master
 ```
 
 ---
